@@ -22,7 +22,7 @@ class CapacidadesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { //cambio
         $aeronaves = Aeronaves::all();
         $proveedores = Proveedores::with('proveedor_configuracion')->with('proveedor_otras_capacidades')->with('proveedor_capacidades')->with('proveedor_aeronave')->where('status', '1')->get();
         $estudios = Estudios::where('status', 'borrador')->get();
